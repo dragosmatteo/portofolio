@@ -46,7 +46,7 @@
                <nav class="nav-bar container">
                   <div class="logo">
                   <a href="#home"
-                  ><img src="./assets/images/logo.png" alt="logo"
+                  ><img src="./assets/images/logo.png" alt="logo" id="logo"
                   /></a>
                </div>
                
@@ -59,21 +59,6 @@
                   <li><a href="#contactt" class="link">Contact</a></li>
                </ul>
                
-               <div class="phone">
-                  <div class="moon">
-                     <img
-                     src="./assets/images/night-svgrepo-com.svg"
-                     alt="moon"
-                     class="night"
-                     />
-                     
-                     <img
-                     src="./assets/images/sun-svgrepo-com.svg"
-                     alt="sun"
-                     class="sun"
-                     />
-                  </div>
-                  
                   <div class="burger">
                      <div>
                         <span class="bar"></span>
@@ -81,7 +66,8 @@
                         <span class="bar"></span>
                      </div>
                   </div>
-               </div>
+                  <img src="./assets/images/moon.png" alt="sun" id="icon" class="iconnn">
+
             </div>
             </nav>
          </header>
@@ -616,5 +602,23 @@
             });
          });
       </script>
+
+       <script>
+
+        const icon = document.getElementById('icon');
+        const logo = document.getElementById('logo');
+
+        icon.addEventListener('click', function() {
+        document.body.classList.toggle("dark-theme");
+            if(document.body.classList.contains("dark-theme")){
+                icon.src = "assets/images/sun.png";
+                logo.src = "./assets/images/DM4.png"
+               }else {
+                  icon.src = "assets/images/moon.png";
+                  logo.src = "./assets/images/logo.png"
+            }
+        })
+
+    </script>
    </body>
 </html>

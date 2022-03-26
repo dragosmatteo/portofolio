@@ -9,7 +9,18 @@
 :root {
    --font-family: "Poppins", sans-serif;
    --bg-color: #dff6ff;
-   --bg-blue: #0088ff;
+   --bg-blue: #0877d9;
+   --bg-primary: #000;
+   --bg-secondary: #fff;
+   --contact-color: #f4f5f7;
+}
+
+.dark-theme {
+   --bg-primary: rgb(255, 255, 255);
+   --bg-secondary: rgb(0, 0, 0);
+   --bg-color: #002331;
+   /* --bg-color: #001975; */
+   --contact-color: #000000;
 }
 
 html {
@@ -35,14 +46,14 @@ a {
 
 /* !Coding! */
 .home-img {
-   background-color: #dff6ff;
+   background-color: var(--bg-color);
    background-size: cover;
    min-height: 100vh;
    width: auto;
 }
 
 header {
-   background-color: #fff;
+   background-color: var(--bg-secondary);
    z-index: 100;
 }
 
@@ -58,18 +69,24 @@ header .logo img {
    cursor: pointer;
 }
 
-.links {
-   display: flex;
-   justify-content: center;
-   align-items: center;
+/* !ICON! */
+.iconnn {
+   width: 40px;
+   cursor: pointer;
 }
 
+.links {
+   display: flex;
+   justify-content: right;
+   text-align: right;
+   flex: 1;
+}
 .links li {
    margin: 0 1rem;
 }
 
 .links a {
-   color: black;
+   color: var(--bg-primary);
 }
 
 .links a::after {
@@ -77,7 +94,7 @@ header .logo img {
    position: relative;
    bottom: 0;
    right: 0;
-   background-color: #0088ff;
+   background-color: var(--bg-blue);
    height: 2px;
    width: 0;
    display: block;
@@ -100,26 +117,18 @@ header .logo img {
    width: 40px;
    height: 5px;
    margin: 5px auto;
-   background-color: #0088ff;
+   background-color: var(--bg-blue);
    transition: 0.3s ease-out;
 }
 
-.phone {
-   display: none;
-}
-
 @media (max-width: 1024px) {
-   .phone {
-      display: flex;
-   }
-
    .links {
       position: fixed;
       height: 100vh;
       width: 100%;
       left: -100%;
       top: 85px;
-      background-color: #0088ff;
+      background-color: var(--bg-blue);
       display: flex;
       flex-direction: column;
       justify-content: start;
@@ -141,7 +150,7 @@ header .logo img {
    }
 
    .links a {
-      color: rgb(255, 255, 255);
+      color: var(--bg-secondary);
    }
 
    .burger {
@@ -162,30 +171,6 @@ header .logo img {
    .burger.active .bar:nth-child(3) {
       transform: translateY(-5px) rotate(-45deg);
    }
-
-   .moon {
-      margin-right: 1.5rem;
-   }
-
-   .moon img {
-      width: 40px;
-   }
-
-   .night.active {
-      display: inline;
-   }
-
-   .night {
-      display: none;
-   }
-
-   .sun.active {
-      display: inline;
-   }
-
-   .sun {
-      display: none;
-   }
 }
 
 /* !CURSOR! */
@@ -200,7 +185,7 @@ header .logo img {
    /* background-color: rgb(255, 0, 0); */
    z-index: 10000;
    /* clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%); */
-   border: 3px solid #0088ff;
+   border: 3px solid var(--bg-blue);
    height: 30px;
    width: 30px;
    transition: all 300ms ease-out;
@@ -215,6 +200,7 @@ header .logo img {
    flex-basis: auto;
    padding-top: 6rem;
    padding-bottom: 6rem;
+   color: var(--bg-primary);
 }
 
 /* .text {
@@ -231,7 +217,7 @@ header .logo img {
 }
 
 .text span {
-   color: #0088ff;
+   color: var(--bg-blue);
 }
 
 .text h4 {
@@ -259,7 +245,7 @@ header .logo img {
    cursor: pointer;
    font-size: 1rem;
    border-radius: 7px;
-   color: #fff;
+   color: var(--bg-secondary);
 }
 
 .buttons .services {
@@ -267,12 +253,12 @@ header .logo img {
 }
 
 .buttons .contact button {
-   background-color: #0088ff;
+   background-color: var(--bg-blue);
    transition: 0.3s ease-out;
 }
 
 .buttons .services button {
-   background-color: #000000;
+   background-color: var(--bg-primary);
    transition: 0.3s ease-out;
 }
 
@@ -308,12 +294,12 @@ header .logo img {
 
 .icons ul li i {
    font-size: 1.3rem;
-   color: #000000;
+   color: var(--bg-primary);
    transition: 0.3s ease;
 }
 
 .icons ul li i:hover {
-   color: #0088ff;
+   color: var(--bg-blue);
    transform: translate(0, -5px);
    box-shadow: 0px 6px 12px -6px rgba(0, 0, 0, 0.39);
 }
@@ -330,7 +316,7 @@ header .logo img {
    }
 
    .text span {
-      color: #0088ff;
+      color: var(--bg-blue);
    }
 
    .text h4 {
@@ -400,7 +386,7 @@ header .logo img {
       cursor: pointer;
       font-size: 1rem;
       border-radius: 7px;
-      color: #fff;
+      color: var(--bg-secondary);
    }
 
    .profile img {
@@ -442,10 +428,11 @@ header .logo img {
 
 /* !ABOUT! */
 .about {
-   background-color: #fff;
+   background-color: var(--bg-secondary);
    min-height: 140vh;
    padding-top: 6rem;
    padding-bottom: 6rem;
+   color: var(--bg-primary);
 }
 
 .cont {
@@ -481,18 +468,18 @@ header .logo img {
    background-color: red;
    border-radius: 50px;
    padding: 1.5rem;
-   color: #fff;
+   color: var(--bg-secondary);
    font-size: 2rem;
 }
 
 .award.award-1 .img .text1 .count {
    font-size: 1.5rem;
    font-weight: 700;
-   color: #000000;
+   color: var(--bg-primary);
 }
 
 .award.award-1 .img .text1 .ex {
-   color: #000000;
+   color: var(--bg-primary);
    font-size: 0.9rem;
 }
 
@@ -501,18 +488,18 @@ header .logo img {
    background-color: rgb(0, 255, 55);
    border-radius: 50px;
    padding: 1.5rem;
-   color: #fff;
+   color: var(--bg-secondary);
    font-size: 2rem;
 }
 
 .award.award-2 .img .text1 .count {
    font-size: 1.5rem;
    font-weight: 700;
-   color: #000000;
+   color: var(--bg-primary);
 }
 
 .award.award-2 .img .text1 .ex {
-   color: #000000;
+   color: var(--bg-primary);
    font-size: 0.9rem;
 }
 
@@ -521,18 +508,18 @@ header .logo img {
    background-color: rgb(234, 0, 255);
    border-radius: 50px;
    padding: 1.5rem;
-   color: #fff;
+   color: var(--bg-secondary);
    font-size: 2rem;
 }
 
 .award.award-3 .img .text1 .count {
    font-size: 1.5rem;
    font-weight: 700;
-   color: #000000;
+   color: var(--bg-primary);
 }
 
 .award.award-3 .img .text1 .ex {
-   color: #000000;
+   color: var(--bg-primary);
    font-size: 0.9rem;
 }
 
@@ -541,18 +528,18 @@ header .logo img {
    background-color: rgb(76, 0, 255);
    border-radius: 50px;
    padding: 1.5rem;
-   color: #fff;
+   color: var(--bg-secondary);
    font-size: 2rem;
 }
 
 .award.award-4 .img .text1 .count {
    font-size: 1.5rem;
    font-weight: 700;
-   color: #000000;
+   color: var(--bg-primary);
 }
 
 .award.award-4 .img .text1 .ex {
-   color: #000000;
+   color: var(--bg-primary);
    font-size: 0.9rem;
 }
 
@@ -675,9 +662,9 @@ header .logo img {
 
 .aboutext a button {
    border: none;
-   background-color: #0088ff;
+   background-color: var(--bg-blue);
    border-radius: 7px;
-   color: #fff;
+   color: var(--bg-secondary);
    font-weight: 300;
    padding: 13px 50px;
    text-align: center;
@@ -709,9 +696,9 @@ header .logo img {
 
    .aboutext a button {
       border: none;
-      background-color: #0088ff;
+      background-color: var(--bg-blue);
       border-radius: 7px;
-      color: #fff;
+      color: var(--bg-secondary);
       font-weight: 300;
       padding: 13px 40px;
       text-align: center;
@@ -767,12 +754,13 @@ header .logo img {
 /* !SKILLS! */
 .skills {
    min-height: 100vh;
-   background-color: #dff6ff;
+   background-color: var(--bg-color);
    padding-top: 6rem;
    padding-bottom: 6rem;
    display: flex;
    justify-content: center;
    align-items: center;
+   color: var(--bg-primary);
 }
 
 .skills h1 {
@@ -787,7 +775,7 @@ header .logo img {
 }
 
 .skill {
-   background-color: #fff;
+   background-color: var(--bg-secondary);
    border-radius: 5px;
    padding: 15px 20px;
    box-shadow: 0px 0px 12px -6px rgba(0, 0, 0, 0.39);
@@ -807,7 +795,7 @@ header .logo img {
 }
 
 .progressbar-size {
-   background-color: #0088ff;
+   background-color: var(--bg-blue);
    height: 10px;
    width: 90%;
    border-radius: 7px;
@@ -822,9 +810,10 @@ header .logo img {
 /* !OFFER! */
 .offer {
    min-height: 100vh;
-   background-color: #ffffff;
+   background-color: var(--bg-secondary);
    padding-top: 6rem;
    padding-bottom: 6rem;
+   color: var(--bg-primary);
 }
 
 .offer h1 {
@@ -839,7 +828,7 @@ header .logo img {
 }
 
 .content {
-   background-color: #fff;
+   background-color: var(--bg-secondary);
    display: flex;
    flex-direction: column;
    align-items: flex-start;
@@ -854,7 +843,7 @@ header .logo img {
    background-color: red;
    border-radius: 50px;
    padding: 1.5rem;
-   color: #fff;
+   color: var(--bg-secondary);
    font-size: 2rem;
 }
 
@@ -865,8 +854,8 @@ header .logo img {
 }
 
 .content:hover {
-   background-color: #0088ff;
-   color: #fff;
+   background-color: var(--bg-blue);
+   color: var(--bg-secondary);
 }
 
 @media (max-width: 350px) {
@@ -893,6 +882,7 @@ header .logo img {
 
 .testimonials h1 {
    font-size: 3rem;
+   /* color: var(--bg-primary); */
 }
 
 .testimonial img {
@@ -922,8 +912,8 @@ header .logo img {
 }
 
 .item {
-   background-color: #ffffff;
-   color: #000000;
+   background-color: var(--bg-secondary);
+   color: var(--bg-primary);
    padding: 40px 40px;
    border-radius: 10px;
 }
@@ -962,13 +952,14 @@ header .logo img {
 
 /* !PROJECTS! */
 .projects {
-   background-color: #fff;
+   background-color: var(--bg-color);
    padding-top: 6rem;
    padding-bottom: 6rem;
    min-height: 100vh;
    display: flex;
    justify-content: center;
    align-items: center;
+   color: var(--bg-primary);
 }
 
 .projects .continut h1 {
@@ -993,7 +984,7 @@ header .logo img {
 .project-made {
    width: 360px;
    height: 360px;
-   background-color: #fff;
+   background-color: var(--bg-secondary);
    position: relative;
    cursor: pointer;
    transition: all 0.4s ease-out;
@@ -1049,8 +1040,8 @@ header .logo img {
 }
 
 .git a {
-   background-color: #0088ff;
-   color: #fff;
+   background-color: var(--bg-blue);
+   color: var(--bg-secondary);
    padding: 15px 30px;
    cursor: pointer;
    font-size: 1rem;
@@ -1123,7 +1114,7 @@ header .logo img {
 .inner {
    margin-top: 3rem;
    padding: 40px;
-   background-color: #f4f5f7;
+   background-color: var(--contact-color);
    flex-wrap: wrap;
    gap: 30px;
 }
@@ -1141,7 +1132,7 @@ header .logo img {
 .form-item h3 {
    display: block;
    text-transform: capitalize;
-   color: #000000;
+   color: var(--bg-primary);
    font-weight: 300;
    padding-bottom: 0.5rem;
 }
@@ -1150,9 +1141,9 @@ header .logo img {
    width: 100%;
    height: 50px;
    border-radius: 5px;
-   color: #000000;
+   color: var(--bg-primary);
    border: 1px solid #ddd;
-   background-color: #fff;
+   background-color: var(--bg-secondary);
    transition: 0.3s all ease-in;
    font-size: 1rem;
    padding-left: 0.5rem;
@@ -1160,7 +1151,7 @@ header .logo img {
 }
 
 .form-item input:hover {
-   border: 1px solid #0088ff;
+   border: 1px solid var(--bg-blue);
 }
 
 .form-item input::placeholder {
@@ -1170,7 +1161,7 @@ header .logo img {
 .textarea textarea {
    border: 1px solid #ddd;
    transition: 0.3s ease-out all;
-   background-color: #fff;
+   background-color: var(--bg-secondary);
    width: 100%;
    height: 200px;
    outline: none;
@@ -1180,7 +1171,7 @@ header .logo img {
 
 .textarea textarea:hover {
    outline: none;
-   border: 1px solid #0088ff;
+   border: 1px solid var(--bg-blue);
 }
 
 .submit {
@@ -1191,8 +1182,8 @@ header .logo img {
 }
 
 .submit button {
-   background-color: #0088ff;
-   color: #fff;
+   background-color: var(--bg-blue);
+   color: var(--bg-secondary);
    padding: 15px 40px;
    cursor: pointer;
    font-size: 1.25rem;
@@ -1223,9 +1214,9 @@ header .logo img {
 
 /* !FOOTER! */
 .footer {
-   background-color: #000000;
+   background-color: var(--bg-secondary);
    /* min-height: 40vh; */
-   color: #fff;
+   color: var(--bg-primary);
 }
 
 .footer-links {
@@ -1237,7 +1228,7 @@ header .logo img {
 }
 
 .footer-links a {
-   color: #fff;
+   color: var(--bg-primary);
    font-weight: 300;
    padding: 0 1rem;
    transition: 0.3s ease-out all;
@@ -1249,7 +1240,7 @@ header .logo img {
 
 hr {
    margin-top: 5rem;
-   background-color: rgb(255, 255, 255);
+   background-color: var(--bg-secondary);
    width: 100%;
    height: 1px;
 }
@@ -1288,7 +1279,7 @@ hr {
    transition: 0.3s ease-out all;
    width: 100%;
    z-index: 100;
-   background-color: #fff;
+   background-color: var(--bg-secondary);
 }
 
 /* !SCROLL up! */
@@ -1296,7 +1287,7 @@ hr {
    display: flex;
    justify-content: center;
    align-items: center;
-   background-color: #0088ff;
+   background-color: var(--bg-blue);
    width: 50px;
    height: 50px;
    text-align: center;
@@ -1309,7 +1300,7 @@ hr {
    visibility: hidden;
    z-index: 10;
    cursor: pointer;
-   color: #fff;
+   color: var(--bg-secondary);
 }
 
 .button-up.show {
