@@ -78,7 +78,7 @@
                <!-- <br /> -->
                <h1>Dragoș <span class="blue">Matteo</span></h1>
                <!-- <br /> -->
-               <h4>Web Developer</h4>
+               <h4>Web <span class="auto-type"></span></h4>
                <p>
                   Dragos Matteo is a Web Developer, Freelancer and a guy
                   who likes to constantly grow
@@ -581,6 +581,7 @@
       <div class="cursor" id="cursor"></div>
 
       <!-- !SCRIPT! -->
+      <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
       <script src="./assets/js/jQuery3.min.lib.js"></script>
       <script src="./assets/js/owl.carousel.min.js"></script>
 
@@ -616,6 +617,15 @@
             }
         })
 
+        </script>
+
+        <script>
+        var typed = new Typed(".auto-type", {
+         strings: ["Developer...", "Designer..."],
+         typeSpeed: 150,
+         backSpeed: 150,
+         loop: true
+        })
     </script>
    </body>
 </html>
