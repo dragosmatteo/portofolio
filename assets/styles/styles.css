@@ -63,6 +63,7 @@ header {
    display: flex;
    justify-content: space-between;
    align-items: center;
+   z-index: 1000;
 }
 
 header .logo img {
@@ -187,6 +188,10 @@ header .logo img {
       height: auto;
       width: 80px;
       cursor: pointer;
+      margin-left: -15px;
+   }
+
+   .burger {
       margin-left: -15px;
    }
 }
@@ -1251,7 +1256,7 @@ hr {
    box-shadow: 0px 6px 12px -6px rgba(0, 0, 0, 0.39);
    transition: 0.3s ease-out all;
    width: 100%;
-   z-index: 100;
+   z-index: 1000;
    background-color: var(--bg-secondary);
 }
 
