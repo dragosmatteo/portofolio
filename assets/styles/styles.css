@@ -182,6 +182,15 @@ header .logo img {
    }
 }
 
+@media (max-width: 1000px) {
+   header .logo img {
+      height: auto;
+      width: 80px;
+      cursor: pointer;
+      margin-left: -15px;
+   }
+}
+
 /* !CURSOR! */
 .cursor {
    position: fixed;
