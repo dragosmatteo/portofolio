@@ -16,8 +16,6 @@ hamburger.addEventListener("click", function () {
    });
 });
 
-// moon.addEventListener("click", function () {});
-
 // !! CURSOR
 let cursor = document.getElementById("cursor");
 document.body.addEventListener("mousemove", function (e) {
@@ -28,14 +26,22 @@ document.body.addEventListener("mousemove", function (e) {
 // !! sticky
 const nav = document.getElementById("nav");
 const about = document.getElementById("about");
-const button = document.querySelector("button-up");
 
 window.onscroll = function () {
    if (window.pageYOffset >= about.offsetTop) {
       nav.classList.add("sticky");
-      // button.classList.add("show");
    } else {
       nav.classList.remove("sticky");
-      // button.classList.remove("show");
    }
 };
+
+// !! Button
+const button = document.querySelector(".button-up");
+
+window.addEventListener("scroll", () => {
+   if (window.pageYOffset > 100) {
+      button.classList.add("active");
+   } else {
+      button.classList.remove("active");
+   }
+});
