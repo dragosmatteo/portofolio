@@ -127,7 +127,7 @@ header .logo img {
 @media (max-width: 1024px) {
    .links {
       position: fixed;
-      min-height: 100vh;
+      max-height: 100vh;
       width: 100%;
       left: -100%;
       top: 85px;
@@ -138,8 +138,8 @@ header .logo img {
       align-content: center;
       text-align: center;
       transition: 0.5s ease-out;
-      /* padding-top: 1rem; */
       z-index: 1000;
+      padding: 3rem 0;
    }
 
    .links.active {
