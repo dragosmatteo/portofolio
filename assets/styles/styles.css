@@ -52,6 +52,8 @@ a {
    background-size: cover;
    /* min-height: 100vh; */
    width: auto;
+   /* opacity: 0;
+   display: none; */
 }
 
 header {
@@ -1283,4 +1285,22 @@ hr {
 
 .button-up.active {
    opacity: 1;
+}
+
+@media (max-width: 500px) {
+   .button-up {
+      display: none;
+   }
+}
+
+/* !PRELOADER! */
+#drawing_canvas {
+   position: absolute;
+   margin: auto;
+   width: 512px;
+   height: 350px;
+   top: 0;
+   bottom: 0;
+   left: 0;
+   right: 0;
 }

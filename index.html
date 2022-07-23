@@ -35,6 +35,9 @@
          crossorigin="anonymous"
          referrerpolicy="no-referrer"
       />
+
+         <!-- !SCROLL REVEAL! -->
+      <script src="https://unpkg.com/scrollreveal"></script>
    </head>
    <body>
       <script src="./assets/js/app.js" defer></script>
@@ -580,6 +583,9 @@
          <!-- !CURSOR! -->
       <div class="cursor" id="cursor"></div>
 
+      <!-- !PRELOADER! -->
+      <!-- <canvas id="drawing_canvas"></canvas> -->
+
       <!-- !SCRIPT! -->
       <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
       <script src="./assets/js/jQuery3.min.lib.js"></script>
@@ -627,5 +633,27 @@
          loop: true
         })
     </script>
+
+       <!-- !SCROLL REVEAL! -->
+    <script>
+      ScrollReveal({
+         reset: true,
+         distance: '60px',
+         duration: 2500,
+         delay: 100
+      });
+
+      ScrollReveal().reveal('.home', {delay: 100, origin: 'top'});
+      ScrollReveal().reveal('.icons i', {delay: 300, origin: 'bottom', interval: 200, distance: '30px'});
+      ScrollReveal().reveal('.awards', {delay: 100, origin: 'top'});
+      ScrollReveal().reveal('.aboutme', {delay: 300, origin: 'bottom'});
+      ScrollReveal().reveal('.skill', {delay: 300, origin: 'top'});
+      ScrollReveal().reveal('.content', {delay: 300, origin: 'top'});
+      ScrollReveal().reveal('.testimonial', {delay: 300, origin: 'right'});
+      ScrollReveal().reveal('.project-made', {delay: 300, origin: 'left'});
+      ScrollReveal().reveal('.form-item', {delay: 300, origin: 'top'});
+      ScrollReveal().reveal('.submit', {delay: 300, origin: 'top'});
+      // ScrollReveal().reveal('.button-up', {delay: 1000, origin: 'right', distance: '100px'});
+      </script>
    </body>
 </html>
